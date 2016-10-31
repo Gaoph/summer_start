@@ -8,7 +8,6 @@
     </resultMap>
 
     <select id="getUserList" resultMap="UserMap">
-        select *
-        from user
+        select * from user
     </select>
 </mapper>
