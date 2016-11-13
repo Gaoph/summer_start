@@ -4,10 +4,18 @@ import com.myblog.entity.User;
 
 import java.util.List;
 
-/**
- * 用户Map
- * Created by gaoph on 2016/10/31.
- */
 public interface UserMapper {
+    int deleteByPrimaryKey(Integer userId);
+
+    int insert(User record);
+
+    int insertSelective(User record);
+
+    User selectByPrimaryKey(Integer userId);
+
+    int updateByPrimaryKeySelective(User record);
+
+    int updateByPrimaryKey(User record);
+
     List<User> getUserList();
 }

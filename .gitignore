@@ -10,3 +10,12 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/MyBlog/target/myblog/WEB-INF/classes
+/MyBlog/src/main/webapp/WEB-INF/classes/applicationContext.xml
+/MyBlog/src/main/webapp/WEB-INF/classes/generatorConfig.xml
+/MyBlog/src/main/webapp/WEB-INF/classes/log4j.properties
+/MyBlog/src/main/webapp/WEB-INF/classes/mybatis-mapper/operation/ArticleMapper.xml
+/MyBlog/src/main/webapp/WEB-INF/classes/mybatis-mapper/user/UserMapper.xml
+/MyBlog/src/main/webapp/WEB-INF/classes/properties/mysql.properties
+/MyBlog/src/main/webapp/WEB-INF/classes/spring-mybatis.xml
+/MyBlog/src/main/webapp/WEB-INF/classes/spring-servlet-config.xml
