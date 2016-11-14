@@ -4,12 +4,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>QuickStart示例:<sitemesh:title/></title>
+    <title><sitemesh:title/></title>
     <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
-    <meta http-equiv="Cache-Control" content="no-store"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
     <sitemesh:head/>
+
+    <!-- 新 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+
+    <script src="/js/jquery-3.1.1.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
 </head>
 
 <body>

@@ -37,4 +37,10 @@ public class BaseController {
         modelMap.put("userList", userList);
         return "home";
     }
+
+    @RequestMapping("/login")
+    public String login(ModelMap modelMap) {
+        List<User> userList = userService.getUser();
+        return "login";
+    }
 }
