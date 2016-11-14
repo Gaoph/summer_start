@@ -1,8 +1,9 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" %>
-<link href="/css/login.css" rel="stylesheet">
+<link href="<c:url value="/css/login.css"/>" rel="stylesheet">
 
 <div class="signin">
-    <div class="signin-head"><img src="/images/head_120.png" alt="" class="img-circle"></div>
+    <div class="signin-head"><img src="<c:url value="/images/head_120.png"/>" class="img-circle"></div>
     <form class="form-signin" role="form">
         <input type="text" class="form-control" placeholder="用户名" required autofocus/>
         <input type="password" class="form-control" placeholder="密码" required/>
