@@ -1,0 +1,7 @@
+com\myblog\controller\BaseController.class
+com\myblog\dao\ArticleMapper.class
+com\myblog\common\entity\ResultMessage.class
+com\myblog\entity\User.class
+com\myblog\service\UserService.class
+com\myblog\entity\Article.class
+com\myblog\dao\UserMapper.class
