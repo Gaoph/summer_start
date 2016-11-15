@@ -2,11 +2,12 @@
 <decorators defaultdir="/WEB-INF/sitemesh/">
     <excludes>
         <pattern>/images/*</pattern>
-        <pattern>/javascripts/*</pattern>
+        <pattern>/js/*</pattern>
         <pattern>/style/*</pattern>
     </excludes>
     <decorator name="main" page="default.jsp">
         <pattern>/welcome/*</pattern>
+        <pattern>/picture/*</pattern>
     </decorator>
 </decorators>
 

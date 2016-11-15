@@ -12,7 +12,7 @@
     <!-- 加载Spring配置文件 -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:applicationContext.xml</param-value>
+        <param-value>classpath:**Context.xml</param-value>
         <!--<param-value>classpath:spring-mybatis.xml</param-value>-->
     </context-param>
 
@@ -43,6 +43,10 @@
     <servlet-mapping>
         <servlet-name>default</servlet-name>
         <url-pattern>/images/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>default</servlet-name>
+        <url-pattern>/uploadify/*</url-pattern>
     </servlet-mapping>
 
     <!--装饰器-->

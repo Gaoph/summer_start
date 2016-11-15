@@ -34,7 +34,7 @@
 }
 
 .uploadify-queue-item .cancel a {
-    background: url('/uploadify/img/uploadify-cancel.png') 0 0 no-repeat;
+    /*background: url('/uploadify/img/uploadify-cancel.png') 0 0 no-repeat;*/
     float: right;
     height: 16px;
     text-indent: -9999px;

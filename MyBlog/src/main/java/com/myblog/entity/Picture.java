@@ -12,7 +12,7 @@ public class Picture implements Serializable {
 
     private Date createdAt;
 
-    private Integer isDelete;
+    private boolean isDelete;
 
     private static final long serialVersionUID = 1L;
 
@@ -48,11 +48,11 @@ public class Picture implements Serializable {
         this.createdAt = createdAt;
     }
 
-    public Integer getIsDelete() {
+    public boolean isDelete() {
         return isDelete;
     }
 
-    public void setIsDelete(Integer isDelete) {
-        this.isDelete = isDelete;
+    public void setDelete(boolean delete) {
+        isDelete = delete;
     }
 }

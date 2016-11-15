@@ -42,4 +42,9 @@ public class BaseController {
     public String login(ModelMap modelMap) {
         return "login";
     }
+
+    @RequestMapping("/index")
+    public String index(ModelMap modelMap) {
+        return "index";
+    }
 }

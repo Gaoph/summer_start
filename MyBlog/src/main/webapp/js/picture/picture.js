@@ -8,10 +8,10 @@ function uploadPicture() {
         formData: {
             'type': 'picture'
         },//传输数据JSON格式
-        swf: "/uploadify/uploadify.swf",
+        swf: "/myblog/uploadify/uploadify.swf",
         auto: true,
         uploader: "/upload",
-        buttonText: "",
+        buttonText: "上传图片",
         fileObjName: 'Filedata',
         fileSizeLimit: '50MB',
         fileTypeExts: '*.png;*.jpg',
@@ -33,7 +33,7 @@ function uploadPicture() {
         onQueueComplete: function (queueData) {  //所有队列完成后事件
             var fileArray = [];
             for (var i = 0; i < queueArray.length; i++) {
-                fileArray.push(creatObject(queueArray[i].obj[0].realPath, queueArray[i].obj[0].fileName))
+                fileArray.push(creatObject(queueArray[i].obj[0].filePath, queueArray[i].obj[0].fileName))
             }
             $.ajax({
                 type: "post",
@@ -52,8 +52,8 @@ function uploadPicture() {
 
             function creatObject(filePath, fileName) {
                 var obj = {};
-                obj.picName = filePath;
-                obj.picPath = fileName;
+                obj.picName = fileName;
+                obj.picPath = filePath;
                 return obj;
             }
         }

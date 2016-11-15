@@ -3,6 +3,7 @@ package com.myblog.service.impl;
 import com.myblog.dao.PictureMapper;
 import com.myblog.entity.Picture;
 import com.myblog.service.PictureService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -13,6 +14,7 @@ import java.util.List;
  */
 @Service
 public class PictureServiceImpl implements PictureService {
+    @Autowired
     private PictureMapper pictureMapper;
 
     @Override
