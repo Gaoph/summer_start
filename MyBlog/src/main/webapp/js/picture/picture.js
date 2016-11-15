@@ -8,7 +8,7 @@ function uploadPicture() {
         formData: {
             'type': 'picture'
         },//传输数据JSON格式
-        swf: "/myblog/uploadify/uploadify.swf",
+        swf: "/uploadify/uploadify.swf",
         auto: true,
         uploader: "/upload",
         buttonText: "上传图片",
