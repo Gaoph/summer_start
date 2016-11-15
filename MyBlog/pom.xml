@@ -178,8 +178,6 @@
                 <configuration>
                     <url>http://112.74.54.107:8080/manager/html</url>
                     <server>mytomcat</server>
-                    <username>admin</username>
-                    <password>221812</password>
                     <update>true</update>
                 </configuration>
             </plugin>
