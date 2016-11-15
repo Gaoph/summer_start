@@ -175,62 +175,34 @@
                 </dependencies>
             </plugin>
 
-
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.1</version>
+                <version>2.3.2</version>
                 <configuration>
                     <source>1.7</source>
                     <target>1.7</target>
                 </configuration>
             </plugin>
-
+            <!-- Maven Tomcat Plugin -->
             <plugin>
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.1</version>
+                <version>2.2</version>
                 <configuration>
-                    <url>http://112.74.54.107:8080/manager/html</url>
-                    <server>mytomcat</server>
-                    <update>true</update>
-                </configuration>
-            </plugin>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-install-plugin</artifactId>
-                <version>2.3.1</version>
-                <executions>
-                    <execution>
-                        <id>default-install</id>
-                        <phase>none</phase>
-                    </execution>
-                </executions>
-            </plugin>
+                    <!--Deploy to server-->
+                    <url>http://112.74.54.107:8080/manager/text</url>
+                    <!--名称随意-->
+                    <server>tomcat</server>
+                    <!--账户-->
+                    <username>admin</username>
+                    <!--密码-->
+                    <password>221812</password>
 
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.1</version>
-                <configuration>
-                    <webResources>
-                        <resource>
-                            <directory>src/main/webapp</directory>
-                        </resource>
-                    </webResources>
-                </configuration>
-            </plugin>
-
-            <plugin>
-                <groupId>org.apache.tomcat.maven</groupId>
-                <artifactId>tomcat7-maven-plugin</artifactId>
-                <version>2.1</version>
-                <configuration>
-                    <port>8080</port>
+                    <!--项目访问路径，写成/会自动部署到根目录下-->
                     <path>/</path>
-                    <uriEncoding>UTF-8</uriEncoding>
-                    <server>tomcat7</server>
+                    <port>8080</port>
                 </configuration>
             </plugin>
         </plugins>
