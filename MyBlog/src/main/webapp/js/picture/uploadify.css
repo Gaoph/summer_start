@@ -1,0 +1,42 @@
+
+.uploadify {
+    display: block;
+    width: 170px !important;
+    padding-left: 70px;
+    height: 50px;
+    line-height: 50px;
+    color: #fff;
+    /*background: url(/images/back/uploadbtn.png) 18px center no-repeat;*/
+    border-radius: 4px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    font-size: 26px;
+    font-weight: bold;
+    margin-left: -110px;
+    margin-top: -50px;
+}
+
+.uploadify-queue {
+    margin-bottom: 1em;
+    position: fixed;
+}
+
+.uploadify-queue-item {
+    background-color: #4d90fe;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font: 11px Verdana, Geneva, sans-serif;
+    margin-top: 5px;
+    max-width: 350px;
+    padding: 10px;
+}
+
+.uploadify-queue-item .cancel a {
+    background: url('/uploadify/img/uploadify-cancel.png') 0 0 no-repeat;
+    float: right;
+    height: 16px;
+    text-indent: -9999px;
+    width: 16px;
+}

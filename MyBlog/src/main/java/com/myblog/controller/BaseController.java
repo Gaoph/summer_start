@@ -25,7 +25,7 @@ public class BaseController {
     @ResponseBody
     public ResultMessage getUserList() {
         ResultMessage resultMessage = new ResultMessage();
-        List<User> userList = userService.getUser();
+        List<User> userList = userService.getUserList();
         resultMessage.setSuccess(true);
         resultMessage.setObj(userList);
         return resultMessage;
@@ -33,14 +33,13 @@ public class BaseController {
 
     @RequestMapping("/home")
     public String goHome(ModelMap modelMap) {
-        List<User> userList = userService.getUser();
+        List<User> userList = userService.getUserList();
         modelMap.put("userList", userList);
         return "home";
     }
 
     @RequestMapping("/login")
     public String login(ModelMap modelMap) {
-        List<User> userList = userService.getUser();
         return "login";
     }
 }

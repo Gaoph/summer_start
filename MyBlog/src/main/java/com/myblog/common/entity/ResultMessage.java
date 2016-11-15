@@ -1,10 +1,12 @@
 package com.myblog.common.entity;
 
+import java.io.Serializable;
+
 /**
  * 返回结果的实体类
  * Created by gaoph on 2016/10/31.
  */
-public class ResultMessage {
+public class ResultMessage implements Serializable {
     /**
      * 是否成功
      */
