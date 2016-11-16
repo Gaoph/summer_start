@@ -3,6 +3,7 @@ package com.myblog.service.impl;
 import com.myblog.dao.PictureMapper;
 import com.myblog.entity.Picture;
 import com.myblog.service.PictureService;
+import com.myblog.utils.PropertiesTool;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -19,7 +20,11 @@ public class PictureServiceImpl implements PictureService {
 
     @Override
     public List<Picture> selectPictures() {
-        return pictureMapper.selectPictures();
+        List<Picture> pictures = pictureMapper.selectPictures();
+        for (Picture picture : pictures) {
+            picture.setPicPath(picture.getPicPath().replace(PropertiesTool.PICTURE_PATH, PropertiesTool.STATIC_PICTURE_PATH));
+        }
+        return pictures;
     }
 
     @Override

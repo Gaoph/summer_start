@@ -18,33 +18,5 @@ import java.util.List;
 @Controller
 @RequestMapping("/welcome")
 public class BaseController {
-    @Autowired
-    private UserService userService;
 
-    @RequestMapping("/get_list")
-    @ResponseBody
-    public ResultMessage getUserList() {
-        ResultMessage resultMessage = new ResultMessage();
-        List<User> userList = userService.getUserList();
-        resultMessage.setSuccess(true);
-        resultMessage.setObj(userList);
-        return resultMessage;
-    }
-
-    @RequestMapping("/home")
-    public String goHome(ModelMap modelMap) {
-        List<User> userList = userService.getUserList();
-        modelMap.put("userList", userList);
-        return "home";
-    }
-
-    @RequestMapping("/login")
-    public String login(ModelMap modelMap) {
-        return "login";
-    }
-
-    @RequestMapping("/index")
-    public String index(ModelMap modelMap) {
-        return "index";
-    }
 }

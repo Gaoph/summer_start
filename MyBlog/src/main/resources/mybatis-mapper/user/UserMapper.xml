@@ -108,4 +108,8 @@
         <include refid="Base_Column_List"/>
         from user
     </select>
+    <!---->
+    <select id="selectByName" parameterType="com.myblog.entity.User" resultMap="BaseResultMap">
+        select * from user where user_name=#{userName}
+    </select>
 </mapper>

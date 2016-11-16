@@ -54,7 +54,7 @@ body {
     border-radius: 0;
     background: url(../images/login_user.png) 0 0 #eeefea no-repeat;
     padding-left: 60px;
-    color: #FFFFFF;
+    color: black;
 }
 
 .form-signin input[type="password"] {
@@ -62,7 +62,7 @@ body {
     border-radius: 0;
     background: url(../images/login_pas.png) 0 0 #eeefea no-repeat;
     padding-left: 60px;
-    color: #FFFFFF;
+    color: black;
 }
 
 .form-signin button {

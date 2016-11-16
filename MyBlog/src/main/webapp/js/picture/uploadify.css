@@ -1,18 +1,19 @@
 
 .uploadify {
+
     display: block;
-    width: 170px !important;
-    padding-left: 70px;
+    width: 160px !important;
+    padding-left: 30px;
     height: 50px;
     line-height: 50px;
-    color: #fff;
+    /* color: #fff; */
     background-color: #4d90fe;
-    /*background: url(/images/back/uploadbtn.png) 18px center no-repeat;*/
+    /* background: url(/images/back/uploadbtn.png) 18px center no-repeat; */
     border-radius: 4px;
     position: absolute;
     left: 50%;
     top: 50%;
-    font-size: 26px;
+    font-size: 22px;
     font-weight: bold;
     margin-left: -110px;
     margin-top: -50px;

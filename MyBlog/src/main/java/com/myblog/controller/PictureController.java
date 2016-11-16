@@ -44,7 +44,7 @@ public class PictureController extends BaseController {
     }
 
     /**
-     * 跳往上传图片页面
+     * 获取图片列表
      */
     @RequestMapping("/get_picture_list")
     public String getPictures(ModelMap modelMap) {

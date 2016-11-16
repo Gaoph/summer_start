@@ -6,8 +6,10 @@
         <pattern>/style/*</pattern>
     </excludes>
     <decorator name="main" page="default.jsp">
-        <pattern>/welcome/*</pattern>
-        <pattern>/picture/*</pattern>
+
+        <pattern>/*</pattern>
+
+
     </decorator>
 </decorators>
 

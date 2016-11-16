@@ -18,4 +18,11 @@ public interface UserMapper {
     int updateByPrimaryKey(User record);
 
     List<User> getUserList();
+
+    /**
+     * 根据用户名查询用户
+     * @param user
+     * @return
+     */
+    User selectByName(User user);
 }

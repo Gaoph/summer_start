@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.myblog.dao.PictureMapper">
+    <resultMap id="BaseResultMap" type="com.myblog.entity.Picture">
+        <id column="pic_id" property="picId" jdbcType="INTEGER"/>
+        <result column="pic_name" property="picName" jdbcType="VARCHAR"/>
+        <result column="pic_path" property="picPath" jdbcType="VARCHAR"/>
+        <result column="created_at" property="createdAt" jdbcType="TIMESTAMP"/>
+        <result column="is_delete" property="isDelete" jdbcType="TINYINT"/>
+    </resultMap>
+    <sql id="Base_Column_List">
+    pic_id, pic_name, pic_path, created_at, is_delete
+  </sql>
+    <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer">
+        select
+        <include refid="Base_Column_List"/>
+        from pic
+        where pic_id = #{picId,jdbcType=INTEGER}
+    </select>
+
+    <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from pic
+    where pic_id = #{picId,jdbcType=INTEGER}
+  </delete>
+    <insert id="insert" parameterType="com.myblog.entity.Picture">
+    insert into pic (pic_id, pic_name, pic_path, 
+      created_at, is_delete)
+    values (#{picId,jdbcType=INTEGER}, #{picName,jdbcType=VARCHAR}, #{picPath,jdbcType=VARCHAR}, 
+      #{createdAt,jdbcType=TIMESTAMP}, #{isDelete,jdbcType=TINYINT})
+  </insert>
+    <insert id="insertSelective" parameterType="com.myblog.entity.Picture">
+        insert into pic
+        <trim prefix="(" suffix=")" suffixOverrides=",">
+            <if test="picId != null">
+                pic_id,
+            </if>
+            <if test="picName != null">
+                pic_name,
+            </if>
+            <if test="picPath != null">
+                pic_path,
+            </if>
+            <if test="createdAt != null">
+                created_at,
+            </if>
+            <if test="isDelete != null">
+                is_delete,
+            </if>
+        </trim>
+        <trim prefix="values (" suffix=")" suffixOverrides=",">
+            <if test="picId != null">
+                #{picId,jdbcType=INTEGER},
+            </if>
+            <if test="picName != null">
+                #{picName,jdbcType=VARCHAR},
+            </if>
+            <if test="picPath != null">
+                #{picPath,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDelete != null">
+                #{isDelete,jdbcType=TINYINT},
+            </if>
+        </trim>
+    </insert>
+    <update id="updateByPrimaryKeySelective" parameterType="com.myblog.entity.Picture">
+        update pic
+        <set>
+            <if test="picName != null">
+                pic_name = #{picName,jdbcType=VARCHAR},
+            </if>
+            <if test="picPath != null">
+                pic_path = #{picPath,jdbcType=VARCHAR},
+            </if>
+            <if test="createdAt != null">
+                created_at = #{createdAt,jdbcType=TIMESTAMP},
+            </if>
+            <if test="isDelete != null">
+                is_delete = #{isDelete,jdbcType=TINYINT},
+            </if>
+        </set>
+        where pic_id = #{picId,jdbcType=INTEGER}
+    </update>
+    <update id="updateByPrimaryKey" parameterType="com.myblog.entity.Picture">
+    update pic
+    set pic_name = #{picName,jdbcType=VARCHAR},
+      pic_path = #{picPath,jdbcType=VARCHAR},
+      created_at = #{createdAt,jdbcType=TIMESTAMP},
+      is_delete = #{isDelete,jdbcType=TINYINT}
+    where pic_id = #{picId,jdbcType=INTEGER}
+  </update>
+    <!--获取所有图片-->
+    <select id="selectPictures" resultMap="BaseResultMap">
+        select
+        <include refid="Base_Column_List"/>
+        from pic
+    </select>
+</mapper>

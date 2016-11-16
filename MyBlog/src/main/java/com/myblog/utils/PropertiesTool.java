@@ -9,7 +9,10 @@ import java.util.ResourceBundle;
 public class PropertiesTool {
     public static ResourceBundle resource = ResourceBundle.getBundle("properties/init");
 
+    public static String STATIC_PATH = resource.getString("staticUrl");
+
     public static String PICTURE_PATH = resource.getString("pictureUrl");
 
-    public static String STATIC_PATH = resource.getString("staticUrl");
+    public static String STATIC_PICTURE_PATH = resource.getString("staticPictureUrl");
+
 }
